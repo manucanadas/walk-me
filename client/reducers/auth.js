@@ -1,4 +1,10 @@
-const initialState = []
+const initialState = {
+  loggedIn: true,
+  user: {
+    id: 1,
+    username: 'walkymcwalkface'
+  }
+}
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
