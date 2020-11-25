@@ -5,37 +5,43 @@
 ## Wireframes
 
 ## API
-/api/v1/register
-//adding a user - registering them
-POST (req, res) registerUser {
 
-}
+| Method | Path | Description | NOTES |
+|---|---|---|---|
+| POST | /api/v1/register | adds a user - registering them | Authenticare
+| POST | /api/v1/login | logging in a user and getting user info from DB | Authenticare
+| GET | /api/v1/walks | let us see all walks on the page
+| GET | /api/v1/walk/:name | shows individual walk with all details and comments
+| POST | /api/v1/comments | add a comment for a walk
+| GET | /api/v1/walks/saved | shows the logged in persons saved walks
+| GET | /api/v1/user | Get the user information
+|---|---|---|---|
 
-/api/v1/login
-//logging in a user and getting user info from DB
-GET (res) logIn {
 
-}
+### API Request and response bodies
 
+### /api/v1/walks
 
-/api/v1/walks ------
-// let us see all walks on the page
+##### _Response_
 
-GET walks (res) {
+```js 
+{
   id
   title
   img
-  coord {
-    tart: {lat, long} 
-    end: {lat, long}0
+  coords {
+    start: {lat, long} 
+    end: {lat, long}
   }
 }
+```
 
+### /api/v1/walk/:name
 
-/api/v1/walk/:name
-//shows individual walk with all details and comments
+##### _Response_
 
-GET walk (res) {
+```js
+{
   id
   title
   description
@@ -45,9 +51,9 @@ GET walk (res) {
   dog-friendly
   difficulty-rating
   img
-  coord {
+  coords {
     start: {lat, long} 
-    end: {lat, long}0
+    end: {lat, long}
   }
   comment [
     {
@@ -59,28 +65,44 @@ GET walk (res) {
     }
   ]
 }
+```
 
-POST comment (req, res) {
+### /api/v1/comments
+
+##### _Request_
+
+```js
+{
   comment {
       date: 'date string'
       username: 'string'
       text: 'string'
       img: 'string'
       enjoyment-rating: integer
-    }
-    
+    }  
 }
+```
 
+##### _Response_
+<!-- TODO: What will the response be? -->
 
-/api/v1/walks/saved
-//shows the logged in persons saved walks
+### /api/v1/user
 
-GET user (res) {
+##### _Response_
+
+```js
+{
   id
   username
 }
+```
 
-GET user-walk (res) {
+### /api/v1/walks/saved
+
+##### _Response_
+
+```js
+{
   user_id
   saved_walks {
     walk_id
@@ -90,12 +112,12 @@ GET user-walk (res) {
    walk_id
   }
 }
-
+```
 
 ## Global State
 The global state object looks a bit like this:
 
-```javascript
+```js
 
 const globalState = {
   search: {
@@ -140,9 +162,8 @@ const globalState = {
   completedWalks: [integer, integer],
   savedWalks: [integer, integer],
 }
-
 ```
 
 ## Database
 
-![database diagram](/screenshots/dbDiagram.png)
+![database diagram](/_docs/screenshots/dbDiagram.png)
