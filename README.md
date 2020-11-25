@@ -7,6 +7,12 @@
 ## API
 
 ## Global State
+globalState = {
+  search:{
+    lat: float(7),
+
+  }
+}
 
 ## Database
 
