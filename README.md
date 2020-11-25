@@ -59,3 +59,4 @@ const globalState = {
 
 ## Database
 
+![database diagram](/screenshots/dbDiagram.png)
