@@ -65,6 +65,23 @@ function addUser(db = connection){
 
 ## Wireframes
 
+#### Home
+
+![Home](_docs/ComponetsPlanning/Imgs/Home.png )
+
+#### Walks
+
+![Walks](_docs/ComponetsPlanning/Imgs/Walks.png )
+
+#### Walks/:name
+
+![WalksName](_docs/ComponetsPlanning/Imgs/WalksName.png )
+
+#### SavedList
+
+![SavedList](_docs/ComponetsPlanning/Imgs/SavedList.png )
+
+
 ## API
 
 | Method | Path | Description | NOTES |
