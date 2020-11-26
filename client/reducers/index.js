@@ -6,11 +6,10 @@ import savedWalks from './savedWalks'
 import search from './search'
 import walks from './walks'
 
-
 export default combineReducers({
   auth,
   completedWalks,
   savedWalks,
   search,
-  walks,
+  walks
 })

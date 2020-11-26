@@ -1,12 +1,10 @@
 import React from 'react'
 
-
-
 const Nav = () => {
   return (
-<>
-<h4>Navigation</h4>
-</>
+    <>
+      <h4>Navigation</h4>
+    </>
   )
 }
 

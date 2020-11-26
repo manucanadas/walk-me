@@ -13,5 +13,3 @@ test('runner is working', () => {
 //   const root = wrapper.find('.app')
 //   expect(root).toHaveLength(1)
 // })
-
-

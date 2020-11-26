@@ -1,9 +1,5 @@
 const express = require('express')
 
-const walksDb = require('../db/walksDb')
-const usersDb = require('../db/usersDb')
-const commentsDb = require('../db/commentsDb')
-
 const router = express.Router()
 
 router.get('/', (req, res) => {
