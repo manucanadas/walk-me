@@ -1,7 +1,7 @@
 const connection = require('./connection')
 
-function getWalks (db = connection) {
-
+function getAllWalks (db = connection) {
+  return db('walks').select()
 }
 
 // gets individual walk details & comments
@@ -13,7 +13,7 @@ function getSavedWalksByUser (db = connection) {
 
 }
 module.exports = {
-  getWalks,
+  getAllWalks,
   getWalk,
   getSavedWalksByUser
 }

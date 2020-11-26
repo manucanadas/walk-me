@@ -12,28 +12,31 @@ import User from './User.jsx'
 import WalksSaved from './WalksSaved.jsx'
 import AllWalks from './AllWalks.jsx'
 
-const App = () => {
-  return (
-    <>
-      <Header/>
+import { connect } from 'react-redux'
+import { fetchWalks } from '../actions/index.js'
 
-      <Route exact path='/' component={Home}/>
+class App extends React.Component {
+  componentDidMount () {
+    this.props.dispatch(fetchWalks())
+  }
 
-      <Switch>
-        <Route exact path='/walks/all' component={AllWalks}/>
-        <Route exact path='/walks/saved' component={WalksSaved}/>
-        <Route exact path='/walks/:name' component={IndividualWalk}/>
-        <Route exact path='/walks' component={WalkList}/>
-      </Switch>
-
-      <Route path='/login' component={Login}/>
-
-      <Route path='/register' component={Register}/>
-      <Route path='/user' component={User}/>
-
-    </>
-
-  )
+  render () {
+    return (
+      <>
+        <Header/>
+        <Route exact path='/' component={Home}/>
+        <Switch>
+          <Route exact path='/walks/all' component={AllWalks}/>
+          <Route exact path='/walks/saved' component={WalksSaved}/>
+          <Route exact path='/walks/:name' component={IndividualWalk}/>
+          <Route exact path='/walks' component={WalkList}/>
+        </Switch>
+        <Route path='/login' component={Login}/>
+        <Route path='/register' component={Register}/>
+        <Route path='/user' component={User}/>
+      </>
+    )
+  }
 }
 
-export default App
+export default connect()(App)
