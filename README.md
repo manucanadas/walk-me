@@ -261,7 +261,7 @@ git push origin myBranch
 
 
 # MERGE TIME!! 
-* Feature is done, ready to create a pull request to Deveopment?? 
+* Feature is done, ready to create a pull request to Development?? 
 
 ## 5. Commit your branch
 ```
@@ -269,10 +269,10 @@ git add .
 git commit -m “readyToMerge”   
 ```
 
-## 6. Pull master into your branch, open VScode & deal with the conflicts there.
+## 6. Pull Development into your branch, open VScode & deal with the conflicts there.
 
 ```
-git pull origin master
+git pull origin Development
 code .
 ```
 ## 7. Vscode
@@ -291,20 +291,21 @@ git push origin myBranch
 ```
 ## 9. Github - create pull request
 
-* Create pull request from mybranch to master (on github)
+* Create pull request from mybranch to Development (on github)
 * Tell the git keeper, they will merge the pull request and there should be 0 conflicts as you have already resolved these in your branch.
 
-Create a new branch with a new name
+# Create a new branch with a new name
 ```
-git checkout -b myFeature  
+git checkout -b myNextFeature  
 code .  
 ```
 ## 10. GitKeeper - merge the request
 
 * Merge the pull request on Github only if there are 0 conflicts, then delete the branch.
 
-## 11. Everyone else now needs to pull from master & update their modules
+## 11. Everyone else now needs to pull from Development & update their modules
 ```
+git pull origin Development
 npm i
 ```
 * Reset database
