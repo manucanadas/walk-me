@@ -229,3 +229,89 @@ const globalState = {
 ## Database
 
 ![database diagram](_docs/screenshots/dbDiagram.png )
+
+# Notes from Hortense - Git Protocol in a Team!
+* Clone & Make a branch Steps 1 - 4
+* Merge your feature Steps 5 - 11
+
+## 1. Clone
+```
+cd workspace
+git clone + https link
+cd myRepo
+```
+## 2. Make a branch using the name of your feature
+```
+git checkout -b feature/aFeature  
+code .  
+```
+## 3. Instal modules & reset the database
+```
+npm i
+npm run knex migrate:latest
+npm run knex seed:run
+```
+## 4. Commit & Push your branch
+```
+git status 
+git add .  
+git commit -m “commit message”  
+git push origin myBranch  
+```
+
+
+# MERGE TIME!! 
+* Feature is done, ready to create a pull request to Development?? 
+
+## 5. Commit your branch
+```
+git add .  
+git commit -m “readyToMerge”   
+```
+
+## 6. Pull Development into your branch, open VScode & deal with the conflicts there.
+
+```
+git pull origin Development
+code .
+```
+## 7. Vscode
+
+* Files marked C = Conflict
+* Files marked M = Modified
+* <<<<< Head  = This is you! Current changes, you are HEAD
+* <<<<<< Incoming change = pulled in from the Development branch
+
+## 8. Any conflicts or changes need to be saved, added, & committed again
+
+```
+git add .
+git commit -m “mergeTime”
+git push origin myBranch
+```
+## 9. Github - create pull request
+
+* Create pull request from mybranch to Development (on github)
+* Tell the git keeper, they will merge the pull request and there should be 0 conflicts as you have already resolved these in your branch.
+
+# Create a new branch with a new name
+```
+git checkout -b feature/myNextFeature  
+code .  
+```
+## 10. GitKeeper (This is Kelly!) - merge the request
+
+* Merge the pull request on Github only if there are 0 conflicts, then delete the branch.
+
+## 11. Everyone else now needs to pull from Development & update their modules
+```
+git pull origin Development
+npm i
+```
+* Reset database
+```
+rm server/db/dev.sqlite3
+npm run knex migrate:latest
+npm run knex seed:run
+
+```
