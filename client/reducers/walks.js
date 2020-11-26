@@ -8,11 +8,11 @@ const initialState = [{
     suburb: 'Te Aro',
     dogFriendly: false,
     difficultyRating: 3,
-    path: "[[-122.48369693756104, 37.83381888486939],[-122.48348236083984, 37.83317489144141],[-122.48339653015138, 37.83270036637107],[-122.48356819152832, 37.832056363179625]]",
+    path: '[[-122.48369693756104, 37.83381888486939],[-122.48348236083984, 37.83317489144141],[-122.48339653015138, 37.83270036637107],[-122.48356819152832, 37.832056363179625]]',
     img: 'http://lorempixel.com/400/200',
     coords: {
-      start: "{lat: -41.2967354, 174.7741535,}",
-      end: "{lat: -41.2967354, 174.7741535,}",
+      start: '{lat: -41.2967354, 174.7741535,}',
+      end: '{lat: -41.2967354, 174.7741535,}'
     },
     comments: {
       0: {
@@ -20,7 +20,7 @@ const initialState = [{
         username: 'seriousymcseriousface',
         text: 'This walk was VERY silly',
         img: 'http://lorempixel.com/400/201',
-        enjoymentRating: 4,
+        enjoymentRating: 4
       }
     }
   },
@@ -33,11 +33,11 @@ const initialState = [{
     suburb: 'Te Aro',
     dogFriendly: true,
     difficultyRating: 5,
-    path: "[[-122.48369693756104, 37.83381888486939],[-122.48348236083984, 37.83317489144141],[-122.48339653015138, 37.83270036637107],[-122.48356819152832, 37.832056363179625]]",
+    path: '[[-122.48369693756104, 37.83381888486939],[-122.48348236083984, 37.83317489144141],[-122.48339653015138, 37.83270036637107],[-122.48356819152832, 37.832056363179625]]',
     img: 'http://lorempixel.com/400/200',
     coords: {
-      start: "{lat: -41.2967354, 174.7741535,}",
-      end: "{lat: -41.2967354, 174.7741535,}",
+      start: '{lat: -41.2967354, 174.7741535,}',
+      end: '{lat: -41.2967354, 174.7741535,}'
     },
     comments: {
       0: {
@@ -45,14 +45,14 @@ const initialState = [{
         username: 'walkymcwalkface',
         text: 'This walk was NOT VERY silly',
         img: 'http://lorempixel.com/400/201',
-        enjoymentRating: 1,
+        enjoymentRating: 1
       }
     }
   }
 }]
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     default:
       return state
   }
