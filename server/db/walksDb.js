@@ -1,9 +1,7 @@
 const connection = require('./connection')
 
 function getAllWalks (db = connection) {
-  return db('walks')
-  .join('comments', 'walks.id', 'walk_id')
-  .select('*', 'walks.id AS id')
+  return db('walks').select()
 }
 
 // gets individual walk details & comments
