@@ -13,7 +13,7 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)))
 document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
-      <App />
+      <App className="app" />
     </Provider>,
     document.getElementById('app')
   )
