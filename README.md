@@ -67,19 +67,19 @@ function addUser(db = connection){
 
 #### Home
 
-![Home](_docs/ComponetsPlanning/Imgs/Home.png )
+![Home](_docs/ComponentsPlanning/Imgs/Home.png )
 
 #### Walks
 
-![Walks](_docs/ComponetsPlanning/Imgs/Walks.png )
+![Walks](_docs/ComponentsPlanning/Imgs/Walks.png )
 
 #### Walks/:name
 
-![WalksName](_docs/ComponetsPlanning/Imgs/WalksName.png )
+![WalksName](_docs/ComponentsPlanning/Imgs/WalksName.png )
 
 #### SavedList
 
-![SavedList](_docs/ComponetsPlanning/Imgs/SavedList.png )
+![SavedList](_docs/ComponentsPlanning/Imgs/SavedList.png )
 
 
 ## API
