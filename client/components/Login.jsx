@@ -1,9 +1,38 @@
 import React from 'react'
 
+import { connect } from 'react-redux'
+import { isAuthenticated, signIn } from 'authenticare/client'
 
+import { baseApiUrl as baseUrl } from '../config'
 
-const Login = () => {
-  return (
+class Login extends React.Component { 
+
+    state = {
+        username: '',
+        password: ''
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    handleClick = (e) => {
+        e.preventDefault()
+        const { username, password } = this.state
+        signIn({ username, password }, { baseUrl })
+            .then((token) => {
+                if (isAuthenticated()) {
+                    this.props.history.push('/home')
+                }
+                return null
+            })
+            .catch(err => alert(err.message))
+    }
+
+    render() {
+      return (
 
 <>
   <h4> Login </h4> 
@@ -19,8 +48,8 @@ const Login = () => {
 
         </div>
     </>
-  )
+      )
+  }
 }
 
-
-export default Login
+export default connect()(Login)
