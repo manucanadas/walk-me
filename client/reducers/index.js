@@ -1,7 +1,15 @@
 import { combineReducers } from 'redux'
 
-import fruits from './fruits'
+import auth from './auth'
+import completedWalks from './completedWalks'
+import savedWalks from './savedWalks'
+import search from './search'
+import walks from './walks'
 
 export default combineReducers({
-  fruits
+  auth,
+  completedWalks,
+  savedWalks,
+  search,
+  walks
 })
