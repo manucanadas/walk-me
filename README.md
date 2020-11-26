@@ -242,7 +242,7 @@ cd myRepo
 ```
 ## 2. Make a branch using the name of your feature
 ```
-git checkout -b myFeature  
+git checkout -b feature/aFeature  
 code .  
 ```
 ## 3. Instal modules & reset the database
@@ -280,7 +280,7 @@ code .
 * Files marked C = Conflict
 * Files marked M = Modified
 * <<<<< Head  = This is you! Current changes, you are HEAD
-* <<<<<< Incoming change = pulled in from the master
+* <<<<<< Incoming change = pulled in from the Development branch
 
 ## 8. Any conflicts or changes need to be saved, added, & committed again
 
@@ -296,10 +296,10 @@ git push origin myBranch
 
 # Create a new branch with a new name
 ```
-git checkout -b myNextFeature  
+git checkout -b feature/myNextFeature  
 code .  
 ```
-## 10. GitKeeper - merge the request
+## 10. GitKeeper (This is Kelly!) - merge the request
 
 * Merge the pull request on Github only if there are 0 conflicts, then delete the branch.
 
