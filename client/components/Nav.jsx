@@ -18,12 +18,14 @@ const Nav = () => {
 
           {/* <li className="main-nav__item"><NavLink to='/' activeClassName="active" className="nav-link"> Sign out</NavLink></li> - this also is only visible when users are authenticated*/}
 
-
+ 
  
         </ul>
       </nav>
     </>
   )
 }
+
+//test change
 
 export default Nav
