@@ -6,7 +6,7 @@ const {
   userExists,
   getUserByName,
   createUser
-} = require('../db/users')
+} = require('../db/usersDb')
 
 const router = express.Router()
 
