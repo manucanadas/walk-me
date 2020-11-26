@@ -1,11 +1,8 @@
 import React from 'react'
-// import { connect } from 'react-redux'
+import { Route, Switch } from 'react-router-dom'
 
 import Header from './Header.jsx'
-
-import Search from './Search.jsx'
-import BigMap from './BigMap.jsx'
-
+import Home from './Home.jsx'
 import IndividualWalk from './IndividualWalk.jsx'
 import WalkList from './WalkList.jsx'
 import Login from './Login.jsx'
@@ -17,30 +14,26 @@ import AllWalks from './AllWalks.jsx'
 
 const App = () => {
   return (
-  <>  
-    <Header/>
-   
-    <Search/>
+    <>
+      <Header/>
 
-    <BigMap/>
-    <br/>
-    <WalkList/>
-    <br/>
-    <IndividualWalk/>
-   
-    <br/>
+      <Route exact path='/' component={Home}/>
 
-    <Login/>
-    <Register/>
-    <User/>
-    <br/>
-    <WalksSaved/>
-    <AllWalks/>
+      <Switch>
+        <Route exact path='/walks/all' component={AllWalks}/>
+        <Route exact path='/walks/saved' component={WalksSaved}/>
+        <Route exact path='/walks/:name' component={IndividualWalk}/>
+        <Route exact path='/walks' component={WalkList}/>
+      </Switch>
 
-  </>
+      <Route path='/login' component={Login}/>
+
+      <Route path='/register' component={Register}/>
+      <Route path='/user' component={User}/>
+
+    </>
 
   )
 }
-
 
 export default App

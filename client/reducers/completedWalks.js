@@ -1,7 +1,7 @@
-const initialState = [0,1,2]
+const initialState = [0, 1, 2]
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     default:
       return state
   }

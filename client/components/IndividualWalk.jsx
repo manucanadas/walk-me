@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import Comments from './Comments.jsx'
 
-
 const IndividualWalk = () => {
   return (
     <div className='individual-walk-wrapper' >
