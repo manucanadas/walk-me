@@ -8,6 +8,6 @@ export function verifyIfUserExistsAPI () {
 
 }
 
-export function getUserAPI () {
+export function fetchUserAPI () {
 
 }
