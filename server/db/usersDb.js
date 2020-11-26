@@ -1,17 +1,26 @@
- const connection = require('./connection')
+ const { generateHash } = require('authenticare/server')
+const connection = require('./connection')
+
 
 //adds a user / registers their account
 function createUser (user, db = connection) {
   console.log(user)
   return userExists(user.username, db)
     .then(exists => {
+      console.log("then exists");
       if (exists) {
         throw new Error('User exists')
       }
       return null
     })
-    .then(() => generateHash(user.password))
+      
+      .then(() => {
+        console.log("generate hqash");
+        return generateHash(user.password)
+        })
+      
     .then(passwordHash => {
+      console.log("passwordHash");
       return db('users').insert({ username: user.username, hash: passwordHash })
     })
 }

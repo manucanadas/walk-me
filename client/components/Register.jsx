@@ -24,7 +24,8 @@ class Register extends React.Component {
       register({ username, password }, { baseUrl })
           .then((token) => {
               if (isAuthenticated()) {
-                  this.props.history.push('/create-profile')
+                  // this.props.history.push('/')
+                  // TODO: wrap register in router in order to save history and redirect here
               }
               return null
           })
