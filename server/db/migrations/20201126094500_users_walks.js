@@ -3,6 +3,7 @@ exports.up = function (knex) {
     table.increments('id')
     table.integer('user_id')
     table.integer('walk_id')
+    table.boolean('completed')
   })
 }
 
