@@ -18,6 +18,10 @@
     "build:server": "npm run knex -- migrate:latest",
     "lint": "eslint --ext .js,.jsx .",
     "webpack": "webpack --config ./client/webpack.config.js",
+    "db-reset": "run-s db:*",
+    "db:delete": "rm server/db/dev.sqlite3",
+    "db:migrate": "npm run knex migrate:latest",
+    "db:seed": "npm run knex seed:run",
     "knex": "knex --knexfile ./server/db/knexfile.js"
   },
   "babel": {
