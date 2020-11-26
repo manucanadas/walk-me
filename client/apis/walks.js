@@ -1,13 +1,13 @@
 // import request from 'superagent'
 
-export function getWalksAPI () {
+export function fetchWalksAPI () {
 
 }
 
-export function getWalkAPI () {
+export function fetchWalkAPI () {
 
 }
 
-export function getSavedWalksByUserAPI () {
+export function fetchSavedWalksByUserAPI () {
 
 }
