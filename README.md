@@ -83,29 +83,30 @@ function addUser(db = connection){
 
 #### Components & Children
 
-App
-
--- Header
--- -- Nav
-
--- Home
--- Login
--- Register
--- User
-
--- WalkFinder
--- -- WalkList
--- -- BigMap
-
--- IndividualWalk
--- -- Comments
-
--- SavedWalks
--- -- PolaroidList
--- -- -- Polaroid
-
--- AllWalks
--- -- PolaroidList
+App\
+\
+-- Header\
+-- -- Nav\
+\
+-- Login\
+-- Register\
+-- User\
+\
+-- Home\
+\
+-- WalkFinder\
+-- -- WalkList\
+-- -- BigMap\
+\
+-- IndividualWalk\
+-- -- Comments\
+\
+-- SavedWalks\
+-- -- PolaroidList\
+-- -- -- Polaroid\
+\
+-- AllWalks\
+-- -- PolaroidList\
 -- -- -- Polaroid
 
 
