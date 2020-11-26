@@ -2,14 +2,14 @@ import request from 'superagent'
 
 
 
-export function createUser () {
+export function createUserAPI () {
  
 }
 
-export function verifyIfUserExists (){
+export function verifyIfUserExistsAPI (){
 
 }
 
-export function getUser (){
+export function getUserAPI (){
 
 }
