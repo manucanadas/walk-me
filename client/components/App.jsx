@@ -1,12 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-// import { connect } from 'react-redux'
 
 import Header from './Header.jsx'
-
-import Search from './Search.jsx'
-import BigMap from './BigMap.jsx'
-
+import Home from './Home.jsx'
 import IndividualWalk from './IndividualWalk.jsx'
 import WalkList from './WalkList.jsx'
 import Login from './Login.jsx'
@@ -21,7 +17,7 @@ const App = () => {
   <>  
     <Header/>
    
-    <Route exact path='/' component={Search}/>
+    <Route exact path='/' component={Home}/>
     
     <Switch>
       <Route exact path='/walks/all' component={AllWalks}/>
