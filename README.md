@@ -227,4 +227,4 @@ const globalState = {
 
 ## Database
 
-![database diagram](/_docs/screenshots/dbDiagram.png)
+![database diagram](_docs/screenshots/dbDiagram.png )
