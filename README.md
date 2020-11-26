@@ -228,7 +228,7 @@ const globalState = {
 
 ## Database
 
-![database diagram](_docs/screenshots/dbDiagram.png )
+![database diagram](_docs/screenshots/newDBdiagram.png)
 
 # Notes from Hortense - Git Protocol in a Team!
 * Clone & Make a branch Steps 1 - 4
