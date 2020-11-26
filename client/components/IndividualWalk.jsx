@@ -7,13 +7,19 @@ import Comments from './Comments.jsx'
 const IndividualWalk = () => {
   return (
     <div className='individual-walk-wrapper' >
-        <h3>Lorem ipsum dolor sit amet.</h3>
+        <h1 className='individual-walk-main-title' >Lorem ipsum dolor sit amet.</h1>
         <div className='individual-walk-inner' >
           <div className='individual-walk-image-wrapper'>
               <img className='individual-walk-image' src="https://via.placeholder.com/600x300" alt=""/>
               <img className='individual-walk-image' src="https://via.placeholder.com/600x300" alt=""/>
           </div>
           <div>
+            <h3 className='individual-walk-sub-title'>Lorem ipsum dolor sit amet.</h3>
+            <div className='walk-info'>
+                <div className='walk-detail'><h4>Doggy friendly</h4></div>
+                <div className='walk-detail'><h4>⭐ ⭐ ⭐ ⭐</h4></div>
+                <button className='text-btn'><h4>Button</h4></button>
+            </div>
             <p className='individual-walk-text' >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat turpis in ligula venenatis viverra. Integer auctor dui vitae pulvinar lobortis. Etiam cursus justo et dui tincidunt, sit amet facilisis purus congue. Vivamus vel gravida nulla. Quisque tincidunt ipsum sit amet mi sollicitudin, id aliquet erat viverra. In condimentum magna vel ipsum luctus rhoncus. Quisque sapien massa, gravida vel ex ac, congue ornare augue. Morbi et pulvinar odio, vel posuere diam. Phasellus eleifend tellus et egestas auctor. Sed ut molestie lacus. <br />
 
@@ -24,9 +30,8 @@ const IndividualWalk = () => {
                 Sed pulvinar mi ut massa accumsan, nec dignissim orci bibendum. Morbi condimentum eget sapien eget convallis. Sed in velit dolor. Praesent.
             </p>
           </div>
-          <Comments/>
-
         </div>
+        <Comments/>
     </div>
   )
 }
