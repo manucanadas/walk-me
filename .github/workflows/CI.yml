@@ -1,4 +1,4 @@
-name: CI - Tests runner
+name: CI - Tests & Linting
 on: pull_request
 jobs:
   build:
@@ -9,3 +9,5 @@ jobs:
       run: npm install
     - name: Run tests
       run: npm run test
+    - name: Run Linter
+      run: npm run lint
