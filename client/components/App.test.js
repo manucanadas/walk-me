@@ -1,8 +1,8 @@
-import React from 'react'
-import { shallow, render, mount } from 'enzyme'
+// import React from 'react'
+// import { shallow, render, mount } from 'enzyme'
 
-import App from './App'
-App.prototype.componentDidMount = () => {}
+// import App from './App'
+// App.prototype.componentDidMount = () => {}
 
 test('runner is working', () => {
   expect(true).toBeTruthy()
