@@ -5,6 +5,7 @@ const WalksSaved = () => {
   return (
 
 <>
+<h1>THE WALKS SAVED COMP WORKS</h1>
 <h4>Here is a component for all of the walks on a page, including photo, map & a few details </h4> 
 <br/><br/><br/>
  
