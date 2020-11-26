@@ -14,6 +14,7 @@
 | GET | /api/v1/walk/:name | shows individual walk with all details and comments
 | POST | /api/v1/comments | add a comment for a walk
 | GET | /api/v1/walks/saved | shows the logged in persons saved walks
+| POST | /api/v1/walks/saved/:id | saves a walk to a users saved walks table
 | GET | /api/v1/user | Get the user information
 |---|---|---|---|
 
