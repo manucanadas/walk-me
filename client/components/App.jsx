@@ -22,7 +22,7 @@ const App = () => {
    
     <Search/>
 
-    <BigMap/>
+    <BigMap style="mapbox://styles/mapbox/streets-v8"/>
     <br/>
     <WalkList/>
     <br/>
