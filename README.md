@@ -2,6 +2,21 @@
 
 ## Getting Started
 
+If you'd like to add to our stunning Welly Walks repo here's how to get started:
+
+```
+cd workspace
+git clone + https link
+cd myRepo
+git checkout -b feature/aFeature  
+code .  
+npm i
+npm run knex migrate:latest
+npm run knex seed:run
+```
+
+You're good to go! Remember to checkout & pull from the development branch regularly to ensure your feature branch is not too behind updates by others. Also check the Git Protocol at the bottom of this ReadMe for further details 
+
 ## Naming Conventions
 
 #### CLIENT SIDE ACTIONS:
