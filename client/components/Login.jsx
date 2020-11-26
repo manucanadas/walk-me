@@ -23,7 +23,6 @@ class Login extends React.Component {
         const { username, password } = this.state
         signIn({ username, password }, { baseUrl })
             .then((token) => {
-              console.log(token)
                 if (isAuthenticated()) {
                     //to do: add correct URL for sending user after login
                     this.props.history.push('/home')
