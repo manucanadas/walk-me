@@ -4,7 +4,7 @@ import React from 'react'
 import Header from './Header.jsx'
 
 import Search from './Search.jsx'
-import Map from './Map.jsx'
+import BigMap from './BigMap.jsx'
 
 import IndividualWalk from './IndividualWalk.jsx'
 import WalkList from './WalkList.jsx'
@@ -22,7 +22,7 @@ const App = () => {
    
     <Search/>
 
-    <Map/>
+    <BigMap/>
     <br/>
     <WalkList/>
     <br/>
