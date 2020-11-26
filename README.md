@@ -65,6 +65,50 @@ function addUser(db = connection){
 
 ## Wireframes
 
+#### Major Components
+
+| Route | Component | Notes |
+|---|---|---|
+| / | App | Root Component |
+| / | Header | Shows on all pages |
+| /walks | WalkFinder | 
+| /walks/all | AllWalks |
+| /walks/saved | SavedWalks | Authenticated |
+| /walks/:name | IndividualWalk
+| /login | Login | NOT Authenticated |
+| /register | Register | NOT Authenticated |
+| /user | User
+|---|---|---|
+
+
+#### Components & Children
+
+App
+
+-- Header
+-- -- Nav
+
+-- Home
+-- Login
+-- Register
+-- User
+
+-- WalkFinder
+-- -- WalkList
+-- -- BigMap
+
+-- IndividualWalk
+-- -- Comments
+
+-- SavedWalks
+-- -- PolaroidList
+-- -- -- Polaroid
+
+-- AllWalks
+-- -- PolaroidList
+-- -- -- Polaroid
+
+
 #### Home
 
 ![Home](_docs/ComponentsPlanning/Imgs/Home.png )
