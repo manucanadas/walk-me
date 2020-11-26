@@ -8,7 +8,6 @@ import WalkFinder from './WalkFinder.jsx'
 
 import IndividualWalk from './IndividualWalk.jsx'
 
-
 import Login from './Login.jsx'
 import Register from './Register.jsx'
 import User from './User.jsx'

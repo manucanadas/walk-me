@@ -10,7 +10,6 @@ const SavedWalks = () => {
       <PolaroidList/>
       <br/><br/><br/>
 
-
     </>
   )
 }
