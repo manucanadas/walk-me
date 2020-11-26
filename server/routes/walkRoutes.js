@@ -1,10 +1,17 @@
 const express = require('express')
 
 const router = express.Router()
+const db = require('../db/walksDb')
 
 router.get('/', (req, res) => {
-  // Get map & walklist component
-  res.json({})
+  return db.getAllWalks()
+    .then(walks => {
+      return res.json(walks)
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).json({ message: 'Somthing went wrong' })
+    })
 })
 
 router.get('/:name', (req, res) => {
