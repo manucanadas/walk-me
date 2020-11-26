@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const Search = () => {
+const Home = () => {
   return (
 <>
 <h1>THE SEARCH COMP WORKS</h1>
@@ -16,4 +16,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default Home
