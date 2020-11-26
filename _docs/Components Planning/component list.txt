@@ -1,0 +1,77 @@
+<em>**Component List & Proposed Elements**</em>
+    <Nav />
+      Home
+      Login  --> Profile(?)
+      Logout
+
+route '/' => <Home />
+    Search Bar <Input>
+    'My Location' 
+    Login Button  <button>
+
+
+route '/walks' => <Map /> <WalkList />
+    <Map />
+        Mapbox
+        Tags
+    
+    <WalkList />
+        Each Walk
+          Walk title
+          
+          walk difficulty ?
+          walk duration ?
+          walk dogs ?
+      
+      A way back/home to search or a new search function
+         
+
+route '/walks/:name' => <Walk />
+      Individual Walk
+          walk title
+          walk description
+          walk img
+          walk duration ?
+          walk dogs ?
+          walk difficulty ?
+      Comments
+          comment userId/name --> completed by GlobalState
+          comment date    --> completed by GlobalState
+          comment text    <textArea>
+          comment img     <url? >
+          comment enjoymentRating <drop down>
+          Submit <button>
+
+      A way back/home to search or a new search function
+      
+
+route '/walks/saved' => <SavedList />
+
+        Non-Completed
+        Walk Title => <Walk />
+        Empty completed checkbox
+        Tab to view Completed
+
+        A way back/home to search or a new search function
+
+        Completed
+        Walk Title => <Walk />
+        Walk completed
+        Delete from completed list (?)
+        Tab to view Non-completed
+
+        A way back/home to search or a new search function
+
+        
+        
+route '/login' <Login />
+        UserName <input>
+        Password  <input>
+        Submit Button <button>
+
+route '/register' <Register />
+        UserName  <input>
+        Email     <input>
+        Password  <input>
+        Password confirmation   <input>
+        Submit Button <button>
