@@ -1,35 +1,45 @@
 import React from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+import Header from './Header.jsx'
+import Nav from './Nav.jsx'
+import Search from './Search.jsx'
 
-export class App extends React.Component {
-  state = {
-    fruits: []
-  }
+import Walks from './Walks.jsx'
 
-  componentDidMount () {
-    this.props.dispatch(fetchFruits())
-  }
+import Walk from './Walk.jsx'
+import Comments from './Comments.jsx'
 
-  render () {
-    return (
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
+
+import Login from './Login.jsx'
+import Register from './Register.jsx'
+import User from './User.jsx'
+
+import WalksSaved from './WalksSaved.jsx'
+
+const App = () => {
+  return (
+  <>  
+    <Header/>
+    <Nav/>
+    <Search/>
+    <br/>
+    <Walks/>
+    <br/>
+    <Walk/>
+    <Comments/>
+    <br/>
+
+    <Login/>
+    <Register/>
+    <User/>
+    <br/>
+    <WalksSaved/>
+
+  </>
+
+  )
 }
 
-function mapStateToProps (globalState) {
-  return {
-    fruits: globalState.fruits
-  }
-}
 
-export default connect(mapStateToProps)(App)
+export default App
