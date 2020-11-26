@@ -13,11 +13,11 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)))
 
 document.addEventListener('DOMContentLoaded', () => {
   render(
-    <Router>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </Router>,
+    <Provider store={store}>
+      <Router>
+          <App />
+      </Router>
+    </Provider>,
     document.getElementById('app')
   )
 })

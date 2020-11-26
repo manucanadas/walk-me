@@ -1,5 +1,9 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+<<<<<<< HEAD
+=======
+// import { connect } from 'react-redux'
+>>>>>>> browser router WORKS
 
 import Header from './Header.jsx'
 import Home from './Home.jsx'
