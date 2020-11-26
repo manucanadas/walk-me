@@ -84,14 +84,15 @@ function addUser(db = connection){
 #### Components & Children
 
 App\
+\
 -- Header\
 -- -- Nav\
-\
--- Home\
 \
 -- Login\
 -- Register\
 -- User\
+\
+-- Home\
 \
 -- WalkFinder\
 -- -- WalkList\
