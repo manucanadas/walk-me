@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 // import { connect } from 'react-redux'
 
 import Header from './Header.jsx'
@@ -20,22 +21,19 @@ const App = () => {
   <>  
     <Header/>
    
-    <Search/>
+    <Route exact path='/' component={Search}/>
+    
+    <Switch>
+      <Route exact path='/walks/all' component={AllWalks}/>
+      <Route exact path='/walks/saved' component={WalksSaved}/>
+      <Route exact path='/walks/:name' component={IndividualWalk}/>
+      <Route exact path='/walks' component={WalkList}/>
+    </Switch>
 
-    <BigMap style="mapbox://styles/mapbox/streets-v8"/>
-    <br/>
-    <WalkList/>
-    <br/>
-    <IndividualWalk/>
-   
-    <br/>
-
-    <Login/>
-    <Register/>
-    <User/>
-    <br/>
-    <WalksSaved/>
-    <AllWalks/>
+    <Route path='/login' component={Login}/>
+    
+    <Route path='/register' component={Register}/>
+    <Route path='/user' component={User}/>
 
   </>
 
