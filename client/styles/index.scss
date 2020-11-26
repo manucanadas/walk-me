@@ -1,6 +1,316 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
-html, 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  /* background-image:  */
+  /* url("https://media.giphy.com/media/RHIKETUlUINYvV7CAO/giphy.gif"); */
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Raleway', sans-serif;
+  height: 800px;
+  width: auto;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem;
+
+  background-size:cover;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, 
+  #30352e 0%, 
+  #6e726d 35%, 
+  #a7aaa6 100%);
+}
+
+h1 {
+  /* display: flex; */
+  font-family: 'Raleway', sans-serif;
+  color: aliceblue;
+  font-size: 100px; 
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  text-shadow:  0 0 6px #000;
+}
+
+h3 {
+  /* display: flex; */
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px; 
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  text-shadow:
+  inset 0 -0.6em 1em -0.35em 
+  rgba(87, 85, 85, 0.17),
+  inset 0 0.6em 2em -0.3em
+  rgba(173, 170, 170, 0.15),
+  inset 0 0 0em 0.05em 
+  rgba(233, 230, 230, 0.12);
+}
+h4 {
+  /* display: flex; */
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px; 
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  text-shadow:
+  inset 0 -0.6em 1em -0.35em 
+  rgba(87, 85, 85, 0.17),
+  inset 0 0.6em 2em -0.3em
+  rgba(173, 170, 170, 0.15),
+  inset 0 0 0em 0.05em 
+  rgba(233, 230, 230, 0.12);
+}
+
+// the small description/suburb
+h5 {
+  font-family: 'Raleway', sans-serif;
+  color: aliceblue;
+  background-color: #135e5e;
+  font-size: 20px; 
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  text-shadow:  0 0 12px #000;
+}
+.walks-wrapper {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+
+}
+.BigMap {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+
+
+}
+ .each-walk {
+  justify-content: center;
+  border: 10px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 2px;
+  background-color: #9dafa1; 
+  border-radius:0.2em;
+  box-shadow: 
+  0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.walk-image-and-title {
+
+  position: relative;
+  background-size:cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: 2px;
+  margin: 2px;
+  border: 2px;    
+}
+
+.walk-image {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-around;
+  width: 450px;
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.walk-title-div {
+  position: absolute;
+  top: 20%;
+  /* left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  /* background-color: #555; */
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.walk-title {
+  font-family: 'Raleway', sans-serif;
+  color: aliceblue;
+  font-size: 50px; 
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  text-shadow:  0 0 12px #000;
+}
+
+ .walk-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+ .walk-detail {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem;
+
+}
+
+.text-btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px; 
+  border: 5px;
+  margin: 5px;
+  color: rgb(53, 51, 51);
+  background-color: #d4e6f8;
+  box-shadow: 
+  0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-self: auto;
+  cursor: pointer;
+  border-radius:0.2em;
+  box-sizing: border-box;
+}
+
+.text-btn:hover {
+  background-image: 
+  url("https://lh3.googleusercontent.com/proxy/eUbikXG0umAQAxlPJOZs_r8aQxq6EOnC6c00S_xgoqXlcgjCp7MVpyHgFrpYctmaVwGOX7wwdHp0FFdV5WJp9bg8QgZj3jshPlvr8UHeSyk8K53CtzsAyMUzixLzoWMK6waqKZnRwdxMdip35ak");
+  background-size:cover;
+  color: white;
+  /* background-color: #5091a1; */
+}
+
+.submit-btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px; 
+  border: 5px;
+  margin: 5px;
+  color: rgb(53, 51, 51);
+  background-color: #d4e6f8;
+  box-shadow: 
+  0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-self: auto;
+  cursor: pointer;
+  border-radius:0.2em;
+  box-sizing: border-box;
+}
+
+.submit-btn :hover {
+  background-color: #5091a1;
+  background-size:cover;
+  color: white;
+}
+
+.label {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px; 
+  width: 20px;
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  color: rgb(53, 51, 51);
+  background-color: #d3e0ec;
+
+  box-shadow:
+  inset 0 -0.6em 1em -0.35em 
+  rgba(122, 119, 119, 0.17),
+  inset 0 0.6em 2em -0.3em
+  rgba(173, 170, 170, 0.15),
+  inset 0 0 0em 0.05em 
+  rgba(233, 230, 230, 0.12);
+
+  align-self: auto;
+  border-radius:0.2em;
+  box-sizing: border-box;
+}
+
+.login-div {
+  text-align: center;
+  justify-content: center;
+  display: flex
+}
+.search-box-div {
+  text-align: center;
+  justify-content: center;
+  display: flex
+}
+
+.search-box {
+  width: fit-content;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  color: rgb(53, 51, 51);
+  background-color: #cad6e2a6;
+ box-shadow:
+  inset 0 -0.6em 1em -0.35em 
+  rgba(0,0,0,0.17),
+  inset 0 0.6em 2em -0.3em
+  rgba(255,255,255,0.15),
+  inset 0 0 0em 0.05em 
+  rgba(255,255,255,0.12);
+
+  align-self: auto;
+  border-radius:0.2em;
+  box-sizing: border-box;
+}
+
+.form {
+  text-align: center;
+  justify-content: center;
+  display: flex
+}
+.input {
+  font-family: 'Lato', sans-serif;
+  background-color: #adb9c5;
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 15px; 
+  align-self: auto;
+  border-radius:0.2em;
+  box-sizing: border-box;
+  
+}
+
+.input:hover {
+  background-color: #ebf3f5;
+}
+
+.big-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

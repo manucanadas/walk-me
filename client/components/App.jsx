@@ -1,35 +1,39 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { Route, Switch } from 'react-router-dom'
 
-import { fetchFruits } from '../actions'
+import Header from './Header.jsx'
+import Home from './Home.jsx'
+import IndividualWalk from './IndividualWalk.jsx'
+import WalkList from './WalkList.jsx'
+import Login from './Login.jsx'
+import Register from './Register.jsx'
+import User from './User.jsx'
 
-export class App extends React.Component {
-  state = {
-    fruits: []
-  }
+import WalksSaved from './WalksSaved.jsx'
+import AllWalks from './AllWalks.jsx'
 
-  componentDidMount () {
-    this.props.dispatch(fetchFruits())
-  }
+const App = () => {
+  return (
+    <>
+      <Header/>
 
-  render () {
-    return (
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
+      <Route exact path='/' component={Home}/>
+
+      <Switch>
+        <Route exact path='/walks/all' component={AllWalks}/>
+        <Route exact path='/walks/saved' component={WalksSaved}/>
+        <Route exact path='/walks/:name' component={IndividualWalk}/>
+        <Route exact path='/walks' component={WalkList}/>
+      </Switch>
+
+      <Route path='/login' component={Login}/>
+
+      <Route path='/register' component={Register}/>
+      <Route path='/user' component={User}/>
+
+    </>
+
+  )
 }
 
-function mapStateToProps (globalState) {
-  return {
-    fruits: globalState.fruits
-  }
-}
-
-export default connect(mapStateToProps)(App)
+export default App
