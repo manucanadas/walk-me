@@ -1,8 +1,8 @@
 const express = require('express')
 
-const walksDB = require('../db/walksDB')
-const usersDB = require('../db/usersDB')
-const commentsDB = require('../db/commentsDB')
+const walksDB = require('../db/walksDb')
+const usersDB = require('../db/usersDb')
+const commentsDB = require('../db/commentsDb')
 
 const router = express.Router()
 
