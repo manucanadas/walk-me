@@ -2,34 +2,32 @@ import React from 'react'
 // import { connect } from 'react-redux'
 
 import Header from './Header.jsx'
-import Nav from './Nav.jsx'
+
 import Search from './Search.jsx'
-import Map from './Map.jsx'
+import BigMap from './BigMap.jsx'
 
-import Walks from './Walks.jsx'
-
-import Walk from './Walk.jsx'
-import Comments from './Comments.jsx'
-
-
+import IndividualWalk from './IndividualWalk.jsx'
+import WalkList from './WalkList.jsx'
 import Login from './Login.jsx'
 import Register from './Register.jsx'
 import User from './User.jsx'
 
 import WalksSaved from './WalksSaved.jsx'
+import AllWalks from './AllWalks.jsx'
 
 const App = () => {
   return (
   <>  
     <Header/>
-    <Nav/>
+   
     <Search/>
-    <Map/>
+
+    <BigMap/>
     <br/>
-    <Walks/>
+    <WalkList/>
     <br/>
-    <Walk/>
-    <Comments/>
+    <IndividualWalk/>
+   
     <br/>
 
     <Login/>
@@ -37,6 +35,7 @@ const App = () => {
     <User/>
     <br/>
     <WalksSaved/>
+    <AllWalks/>
 
   </>
 
