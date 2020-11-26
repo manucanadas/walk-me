@@ -6,7 +6,7 @@ const Walks = () => {
   return (
 
 <>
-  <h4>Here is a component for all of the walks on a page, including photo, map & a few details </h4> 
+  <h4>Here is a component for all of the walks on a Map, & details of the walk </h4> 
     </>
   )
 }
