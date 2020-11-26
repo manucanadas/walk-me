@@ -4,6 +4,7 @@ import React from 'react'
 import Header from './Header.jsx'
 import Nav from './Nav.jsx'
 import Search from './Search.jsx'
+import Map from './Map.jsx'
 
 import Walks from './Walks.jsx'
 
@@ -23,6 +24,7 @@ const App = () => {
     <Header/>
     <Nav/>
     <Search/>
+    <Map/>
     <br/>
     <Walks/>
     <br/>

@@ -9,12 +9,12 @@ const Login = () => {
   <h4> Login </h4> 
 <div className='login-div'>
  
-          <label className=''><h4>Username or email:</h4> </label>
+          <label className=''>Username or email:</label>
           <input className='input' name="name" label='Name' type="text"/>
-          <label className=''><h4>Password:</h4></label>
+          <label className=''>Password:</label>
           <input className='input' name="password" type="password"/>
           <br/>
-          <button className='submit-btn' type="submit"><h4>Log in</h4></button>
+          <button className='submit-btn' type="submit">Log in</button>
 
 
         </div>
