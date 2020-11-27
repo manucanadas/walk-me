@@ -6,42 +6,43 @@ import Comments from './Comments.jsx'
 const IndividualWalk = (props) => {
   const walkId = props.match.params.name
   const walk = props.walks[walkId]
-  
-  function timeConvert(num) {
-    const hours = (num / 60);
-    const rhours = Math.floor(hours);
-    const minutes = (hours - rhours) * 60;
-    const rminutes = Math.round(minutes);
-    return rhours + " hr " + rminutes + " min.";
+
+  function timeConvert (num) {
+    if (num > 1) {
+      return num + 'hrs'
+    } else {
+      return num + 'hr'
+    }
   }
-   
+
   return (
-    <div className='individual-walk-wrapper' >
+    walk ? <div className='individual-walk-wrapper' >
       <h1 className='individual-walk-main-title' >{walk.title}</h1>
       <div className='individual-walk-inner' >
         <div className='individual-walk-image-wrapper'>
           <img className='individual-walk-image' src={walk.img} alt=""/>
           <img className='individual-walk-image' src="https://via.placeholder.com/600x300" alt=""/>
         </div>
-        <div>
+        <div className='individual-walk-text-wrapper'>
           <h3 className='individual-walk-sub-title'>{walk.suburb}</h3>
           <div className='walk-info'>
-            <div className='walk-detail'><h4>Distance: {walk.distance / 1000}km</h4></div>
+            <div className='walk-detail'><h4>Distance: {walk.distance}km</h4></div>
             <div className='walk-detail'><h4>Duration: {timeConvert(walk.duration)}</h4></div>
-            <div className='walk-detail'><h4>Difficulty: ⭐⭐</h4></div>
-            <button className='text-btn'><h4>Button</h4></button>
+            <div className='walk-detail'><h4>Difficulty:{ [...Array(walk.difficulty)].map((e, i) => '⭐ ')}
+            </h4></div>
           </div>
           <p className='individual-walk-text' >
             {walk.description}
           </p>
+          <Comments/>
         </div>
       </div>
-      <Comments/>
-    </div>
+
+    </div> : ''
   )
 }
 
-function mapStateToProps(globalState) {
+function mapStateToProps (globalState) {
   return {
     walks: globalState.walks
   }

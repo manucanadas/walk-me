@@ -320,19 +320,36 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 16px;
+  text-align: center;
 }
 
 .individual-walk-inner {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-top: 16px;
 }
 
 .individual-walk-image-wrapper {
-  justify-content: center;
+  padding: 32px 16px;
 }
 
 .individual-walk-image {
   height: 300px;
   width: 600px;
+  padding-bottom: 16px;
+}
+
+.individual-walk-sub-title {
+  padding: 16px;
+  font-size: 32px;
+}
+
+.individual-walk-text-wrapper {
+  padding: 32px 16px;
+}
+
+.individual-walk-text {
+  padding-bottom: 32px;
 }
