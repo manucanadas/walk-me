@@ -13,12 +13,13 @@ import SavedWalks from './SavedWalks.jsx'
 import AllWalks from './AllWalks.jsx'
 import { checkAuth } from '../actions/auth.js'
 
-import { fetchWalks } from '../actions/index.js'
+import { fetchWalks, fetchSavedWalks } from '../actions/index.js'
 
 class App extends React.Component {
   componentDidMount () {
     this.props.dispatch(checkAuth())
     this.props.dispatch(fetchWalks())
+    this.props.dispatch(fetchSavedWalks())
   }
 
   render () {

@@ -10,12 +10,15 @@ function getWalkComments (id, db = connection) {
     .select()
 }
 
-// gets individual walk details & comments
-function getWalk (db = connection) {
-
+function getSavedWalksByUser (id, db = connection) {
+  return db('users_walks')
+    .where('user_id', id)
+    .where('users_walks.completed', false)
+    .select()
 }
 
-function getSavedWalksByUser (db = connection) {
+// gets individual walk details & comments
+function getWalk (db = connection) {
 
 }
 
