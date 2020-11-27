@@ -311,7 +311,7 @@ h5 {
 
 .big-map {
   display: flex;
-  justify-content: left;
+  align-content: left;
   margin-left: 45px;
 }
 
@@ -324,7 +324,7 @@ h5 {
   position: relative;
   height: 50rem;
   width: 50rem;
-  
+  justify-content: left;
 }
 
 .sidebarStyle {
@@ -338,4 +338,54 @@ h5 {
   z-index: 1 !important;
   padding: 6px;
   font-weight: bold;
+}
+
+/* Individual walk component styles */
+.individual-walk-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+}
+
+.individual-walk-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.individual-walk-image-wrapper {
+  max-width: 50%;
+  flex-direction: row;
+  padding: 32px 16px;
+}
+
+.individual-walk-image {
+  height: 300px;
+  width: 600px;
+  padding-bottom: 16px;
+}
+
+.individual-walk-sub-title {
+  padding: 16px;
+  font-size: 32px;
+}
+
+.individual-walk-text-wrapper {
+  padding: 32px 16px;
+}
+
+.individual-walk-text {
+  padding-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-box {
+  text-align: center;
+  padding: 2px;
+  margin: 2px;
+  border: 2px; 
 }
