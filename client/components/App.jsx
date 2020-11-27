@@ -23,13 +23,14 @@ class App extends React.Component {
     return (
       <>
         <Header/>
-        <Route exact path='/' component={Home}/
+        <Route exact path='/' component={Home}/>
         <Switch>
           <Route exact path='/walks/all' component={AllWalks}/>
           <Route exact path='/walks/saved' component={SavedWalks}/>
           <Route exact path='/walks/:name' component={IndividualWalk}/>
           <Route exact path='/walks' component={WalkFinder}/>
         </Switch>
+
         <Route path='/login' component={Login}/>
         <Route path='/register' component={Register}/>
         <Route path='/user' component={User}/>
