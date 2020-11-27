@@ -1,5 +1,5 @@
-const initialState = [{
-  0: {
+const initialState = [
+   {
     id: 1,
     title: 'Silly walk',
     description: 'This is a dummy walk',
@@ -14,18 +14,18 @@ const initialState = [{
       start: '{lat: -41.2967354, 174.7741535,}',
       end: '{lat: -41.2967354, 174.7741535,}'
     },
-    comments: {
-      0: {
+    comments: [
+       {
         date: '1606337828',
         username: 'seriousymcseriousface',
         text: 'This walk was VERY silly',
         img: 'http://lorempixel.com/400/201',
         enjoymentRating: 4
       }
-    }
+    ]
   },
-  1: {
-    id: 1,
+  {
+    id: 2,
     title: 'Serious walk',
     description: 'This is another dummy walk (only waaaay less fun)',
     duration: 600,
@@ -39,17 +39,17 @@ const initialState = [{
       start: '{lat: -41.2967354, 174.7741535,}',
       end: '{lat: -41.2967354, 174.7741535,}'
     },
-    comments: {
-      0: {
+    comments: [
+      {
         date: '1606337323',
         username: 'walkymcwalkface',
         text: 'This walk was NOT VERY silly',
         img: 'http://lorempixel.com/400/201',
         enjoymentRating: 1
       }
-    }
+      ]
   }
-}]
+]
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
