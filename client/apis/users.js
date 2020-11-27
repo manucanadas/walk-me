@@ -1,10 +1,10 @@
 // import request from 'superagent'
 
-export function createUserAPI () {
+export function createUser () {
 
 }
 
-export function verifyIfUserExistsAPI () {
+export function verifyIfUserExists () {
 
 }
 

@@ -8,17 +8,22 @@ class AddComment extends React.Component {
   }
 
   state = {
-    userId: this.props.auth.user.id,
+    userId: null,
     text: '',
-    walkId: this.fakeProps.walkId,
-    // walkId: get this from url params
+    walkId: '',
     enjoyment: 1
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.auth.user.id !== this.props.auth.user.id) {
-      this.setState({
-        userId: this.props.auth.user.id
+    console.log("cdu", prevProps, this.props)
+    const oldUser = prevProps.auth.user || {}
+    const newUser = this.props.auth.user || {}
+
+    if (oldUser.id !== newUser.id) {
+    console.log("cdu", this.props)
+    this.setState({
+        userId: this.props.auth.user.id,
+        walkId: this.props.walkId
       })
     }
   }

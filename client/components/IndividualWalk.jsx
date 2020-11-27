@@ -4,7 +4,7 @@ import AddComment from './AddComment.jsx'
 
 import Comments from './Comments.jsx'
 
-const IndividualWalk = () => {
+const IndividualWalk = (props) => {
   return (
     <div className='individual-walk-wrapper' >
       <h1 className='individual-walk-main-title' >Lorem ipsum dolor sit amet.</h1>
@@ -31,7 +31,7 @@ const IndividualWalk = () => {
           </p>
         </div>
       </div>
-      <AddComment/>
+      <AddComment walkId={ props.match.params.name }/>
       <Comments/>
     </div>
   )

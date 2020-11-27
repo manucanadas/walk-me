@@ -308,3 +308,34 @@ h5 {
 .input:hover {
   background-color: #ebf3f5;
 }
+
+.big-map {
+  display: flex;
+  justify-content: left;
+  margin-left: 45px;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.mapContainer {
+  position: relative;
+  height: 50rem;
+  width: 50rem;
+  
+}
+
+.sidebarStyle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: bold;
+}
