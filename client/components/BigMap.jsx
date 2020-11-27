@@ -7,11 +7,3 @@ const BigMap = ReactMapboxGl({
 // Secret Key don't look
 // sk.eyJ1Ijoid2Fsay1tZSIsImEiOiJja2h5NnJyb2gwOGdnMnhwZGtxdzlnMHhtIn0.CHilTaXmoWRsMyNR0ulubw
 export default BigMap
-
-// containerStyle={{
-//   height: '80vh',
-//   width: '80vw',
-//   border: '5px',
-//   padding: '5px',
-//   margin: '5px'
-// }}
