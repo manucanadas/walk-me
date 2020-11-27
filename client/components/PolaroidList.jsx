@@ -15,3 +15,5 @@ const PolaroidList = () => {
 }
 
 export default PolaroidList
+
+
