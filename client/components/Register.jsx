@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { isAuthenticated, register } from 'authenticare/client'
-
+import { isAuthenticated, register, getDecodedToken } from 'authenticare/client'
+import { logIn } from '../actions/auth'
 import { baseApiUrl as baseUrl } from '../config'
 
 class Register extends React.Component {
@@ -24,7 +24,9 @@ class Register extends React.Component {
       register({ username, password }, { baseUrl })
           .then((token) => {
               if (isAuthenticated()) {
-                  this.props.history.push('/create-profile')
+                const user = getDecodedToken()
+                this.props.dispatch(logIn(user))
+                this.props.history.push('/')
               }
               return null
           })

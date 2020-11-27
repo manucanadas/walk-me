@@ -1,16 +1,25 @@
+import { LOGIN_SUCCESS, LOGOUT } from '../actions/auth'
+
 const initialState = {
-  loggedIn: true,
-  user: {
-    id: 1,
-    username: 'walkymcwalkface'
-  }
+  loggedIn: false,
+  user: null
 }
 
 const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state
+
+      switch(action.type) {
+        case LOGIN_SUCCESS:
+            return {
+              loggedIn: true,
+              user: action.user
+            }
+        case LOGOUT:
+          return state
+        default: 
+            return state
   }
 }
+
+
 
 export default reducer

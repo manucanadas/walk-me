@@ -1,9 +1,10 @@
 import React from "react";
-
+import { getDecodedToken } from 'authenticare/client'
 import { connect } from "react-redux";
 import { isAuthenticated, signIn } from "authenticare/client";
 
 import { baseApiUrl as baseUrl } from "../config";
+import { logIn } from "../actions/auth";
 
 class Login extends React.Component {
   state = {
@@ -22,9 +23,12 @@ class Login extends React.Component {
     const { username, password } = this.state;
     signIn({ username, password }, { baseUrl })
       .then((token) => {
-        if (isAuthenticated()) {
+        if (isAuthenticated()) { 
+          const user = getDecodedToken()
+          this.props.dispatch(logIn(user))
           //to do: add correct URL for sending user after login
           this.props.history.push("/home");
+
         }
         return null;
       })
