@@ -19,6 +19,7 @@ class BigMap extends React.Component {
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
+
     })
 
     this.state.walks.map(walk => {
