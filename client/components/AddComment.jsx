@@ -14,14 +14,12 @@ class AddComment extends React.Component {
     enjoyment: 1
   }
 
-  componentDidUpdate(prevProps) {
-    console.log("cdu", prevProps, this.props)
+  componentDidUpdate (prevProps) {
     const oldUser = prevProps.auth.user || {}
     const newUser = this.props.auth.user || {}
 
     if (oldUser.id !== newUser.id) {
-    console.log("cdu", this.props)
-    this.setState({
+      this.setState({
         userId: this.props.auth.user.id,
         walkId: this.props.walkId
       })
