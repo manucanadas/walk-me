@@ -1,6 +1,6 @@
-// import request from 'superagent'
+ import request from 'superagent'
 
-import { request } from "express";
+
 
 export function getWalksAPI () {
 }

@@ -20,7 +20,6 @@ function getSavedWalksByUser (db = connection) {
 }
 
 function getCompletedWalks(id, db=connection){
-  console.log('helloooo')
   return db('users_walks')
   .join('walks','walk_id', 'walks.id')
   .select('*')

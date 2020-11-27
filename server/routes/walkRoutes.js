@@ -24,7 +24,6 @@ router.get('/', (req, res) => {
 
 router.get('/completed', (req,res)=>{
   const id = 1
-  console.log('got to route')
   db.getCompletedWalks(id)
   .then(completedWalks =>{
     res.json(completedWalks)
@@ -37,7 +36,7 @@ router.get('/completed', (req,res)=>{
 
 
 router.get('/:name', (req, res) => {
-  console.log(req.params.name)
+ 
   // Get for walk component
   res.json({})
 })

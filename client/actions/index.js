@@ -3,6 +3,7 @@ export const ADDED_COMPLETED_WALK = 'ADD_COMPLETED_WALK'
 export const DELETED_COMPLETED_WALK = 'DEL_COMPLETED_WALK'
 export const GOT_WALKS = 'GOT_WALKS'
 import request from 'superagent'
+import {fetchCompletedWalksAPI} from '../apis/walks'
 
 
 
