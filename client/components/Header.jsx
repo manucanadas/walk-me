@@ -4,7 +4,7 @@ import Nav from './Nav.jsx'
 const Header = () => {
   return (
     <>
-      <h4> The header </h4>
+      <h1> WELLY WALKS </h1>
       <Nav/>
     </>
   )

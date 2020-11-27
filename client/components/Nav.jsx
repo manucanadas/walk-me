@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 const Nav = () => {
   return (
     <>
-      <h4>Navigation</h4>
       <nav className='nav-box'>
         <ul className="main-nav__items" >
 
