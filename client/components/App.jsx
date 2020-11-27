@@ -30,6 +30,7 @@ class App extends React.Component {
           <Route exact path='/walks/:name' component={IndividualWalk}/>
           <Route exact path='/walks' component={WalkFinder}/>
         </Switch>
+
         <Route path='/login' component={Login}/>
         <Route path='/register' component={Register}/>
         <Route path='/user' component={User}/>
