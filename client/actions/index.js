@@ -6,9 +6,10 @@ import request from 'superagent'
 
 
 
-export function setCompletedWalks (walks){
+export function gotCompletedWalks (walks){
   return {
     type: GOT_COMPLETED_WALKS,
+    walks
   }}
 
 export const gotWalks = walks => {
@@ -34,15 +35,17 @@ export function deletedCompletedWalks (id){
 
 
 
-export function fetchWalks() {
+export function fetchCompletedWalks() {
   return dispatch => {
-    return fetchWalksAPI()
-      .then(tasks => {
-        dispatch(setCompletedWalks(walks))
+    return fetchCompletedWalksAPI()
+      .then(walks => {
+        dispatch(gotCompletedWalks(walks))
         return null
       })
     }
   }
+
+
 export const fetchWalks = () => {
   return dispatch => {
     return request

@@ -1,5 +1,3 @@
-
-const db = require('../db/walksDb')
 const express = require('express')
 
 const router = express.Router()
@@ -37,16 +35,6 @@ router.get('/completed', (req,res)=>{
   })
 })
 
-// router.get('/test', (req, res) => {
-//   return db.getWalkComments(1)
-//     .then(comments => {
-//       return res.json(comments)
-//     })
-//     .catch(err => {
-//       console.log(err)
-//       res.status(500).json({ message: 'Somthing went wrong' })
-//     })
-// })
 
 router.get('/:name', (req, res) => {
   console.log(req.params.name)

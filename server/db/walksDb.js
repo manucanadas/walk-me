@@ -23,9 +23,9 @@ function getCompletedWalks(id, db=connection){
   console.log('helloooo')
   return db('users_walks')
   .join('walks','walk_id', 'walks.id')
-  .select()
+  .select('*')
   .where('users_walks.user_id', id)
-  .where('users_walks.completed', true)
+  .where('users_walks.completed', true )
 
 }
 module.exports = {
