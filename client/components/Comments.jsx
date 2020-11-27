@@ -4,8 +4,7 @@ const Comments = () => {
   return (
 
     <>
-      <h1>THE COMMENTS WORK</h1>
-      <h4>Comments here</h4>
+      <h5>Comments here</h5>
     </>
   )
 }

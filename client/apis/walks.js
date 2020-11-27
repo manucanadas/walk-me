@@ -6,15 +6,15 @@ export function getWalksAPI () {
 }
 
 
-export function fetchWalksAPI () {
+export function fetchWalks () {
 
 }
 
-export function fetchWalkAPI () {
+export function fetchWalk () {
 
 }
 
-export function fetchSavedWalksByUserAPI () {
+export function fetchSavedWalksByUser () {
 
 }
 

@@ -17,6 +17,26 @@ npm run knex seed:run
 
 You're good to go! Remember to checkout & pull from the development branch regularly to ensure your feature branch is not too behind updates by others. Also check the Git Protocol at the bottom of this ReadMe for further details 
 
+## Update 3.01pm HR
+just pulled and app crashing? 
+run this in the terminal for auth:
+
+```
+ cp .env.example .env
+```
+
+once your database has first been populated, you can now use this shortcut
+to delete the sql file, run migrations and run seed sequentially
+```
+npm run db-reset
+```
+
+once your database has first been populated, you can now use this shortcut
+to delete the sql file, run migrations and run seed sequentially
+```
+npx eslint --ext .js,.jsx . --fix
+```
+
 ## Naming Conventions
 
 #### CLIENT SIDE ACTIONS:
