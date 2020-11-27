@@ -11,11 +11,13 @@ import Register from './Register.jsx'
 import User from './User.jsx'
 import SavedWalks from './SavedWalks.jsx'
 import AllWalks from './AllWalks.jsx'
+import { checkAuth } from '../actions/auth.js'
 
 import { fetchWalks } from '../actions/index.js'
 
 class App extends React.Component {
   componentDidMount () {
+    this.props.dispatch(checkAuth())
     this.props.dispatch(fetchWalks())
   }
 
