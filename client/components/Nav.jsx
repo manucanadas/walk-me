@@ -15,7 +15,6 @@ const logOutUser = (dispatch) => {
 const Nav = (props) => {
   return (
     <>
-      <h4>Navigation</h4>
       <nav className='nav-box'>
         <ul className="main-nav__items" >
 

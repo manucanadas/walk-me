@@ -5,7 +5,7 @@ const PolaroidList = () => {
   return (
 
     <>
-      <h1>The list of the all the polaroids</h1>
+      <h5>The list of the all the polaroids</h5>
       <div className='walks-wrapper'>
         <Polaroid/>
         <Polaroid/>
