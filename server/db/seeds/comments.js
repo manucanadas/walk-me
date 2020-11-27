@@ -1,4 +1,4 @@
-exports.seed = function (knex) {
+exports.seed = knex => {
   // Deletes ALL existing entries
   return knex('comments')
     .del()
@@ -24,7 +24,7 @@ exports.seed = function (knex) {
           img:
             'https://m.economictimes.com/thumb/msid-59295501,width-1200,height-900,resizemode-4,imgsize-307335/magazines/panache/taking-regular-walks-will-help-slow-down-alzheimers-disease-risk/walk_640x480_thinkstock.jpg',
           enjoyment: 5,
-          walk_id: 3,
+          walk_id: 1,
           flagged: false
         },
         {

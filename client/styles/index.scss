@@ -311,8 +311,33 @@ h5 {
 
 .big-map {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  margin-left: 45px;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.mapContainer {
+  position: relative;
+  height: 50rem;
+  width: 50rem;
+  
+}
+
+.sidebarStyle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: bold;
 }
 
 /* Individual walk component styles */
@@ -332,6 +357,8 @@ h5 {
 }
 
 .individual-walk-image-wrapper {
+  max-width: 50%;
+  flex-direction: row;
   padding: 32px 16px;
 }
 
@@ -352,4 +379,6 @@ h5 {
 
 .individual-walk-text {
   padding-bottom: 32px;
+  justify-content: center;
+  align-items: center;
 }
