@@ -6,20 +6,17 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-
-      switch(action.type) {
-        case LOGIN_SUCCESS:
-            return {
-              loggedIn: true,
-              user: action.user
-            }
-        case LOGOUT:
-          return state
-        default: 
-            return state
+  switch (action.type) {
+    case LOGIN_SUCCESS:
+      return {
+        loggedIn: true,
+        user: action.user
+      }
+    case LOGOUT:
+      return state
+    default:
+      return state
   }
 }
-
-
 
 export default reducer

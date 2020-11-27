@@ -1,41 +1,39 @@
-import React from "react";
-import { getDecodedToken } from 'authenticare/client'
-import { connect } from "react-redux";
-import { isAuthenticated, signIn } from "authenticare/client";
+import React from 'react'
+import { getDecodedToken, isAuthenticated, signIn } from 'authenticare/client'
+import { connect } from 'react-redux'
 
-import { baseApiUrl as baseUrl } from "../config";
-import { logIn } from "../actions/auth";
+import { baseApiUrl as baseUrl } from '../config'
+import { logIn } from '../actions/auth'
 
 class Login extends React.Component {
   state = {
-    username: "",
-    password: "",
+    username: '',
+    password: ''
   };
 
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value,
-    });
+      [e.target.name]: e.target.value
+    })
   };
 
   handleClick = (e) => {
-    e.preventDefault();
-    const { username, password } = this.state;
+    e.preventDefault()
+    const { username, password } = this.state
     signIn({ username, password }, { baseUrl })
       .then((token) => {
-        if (isAuthenticated()) { 
+        if (isAuthenticated()) {
           const user = getDecodedToken()
           this.props.dispatch(logIn(user))
-          //to do: add correct URL for sending user after login
-          this.props.history.push("/home");
-
+          // to do: add correct URL for sending user after login
+          this.props.history.push('/home')
         }
-        return null;
+        return null
       })
-      .catch((err) => alert(err.message));
+      .catch((err) => alert(err.message))
   };
 
-  render() {
+  render () {
     return (
       <>
         <h4> Login </h4>
@@ -63,8 +61,8 @@ class Login extends React.Component {
           </form>
         </div>
       </>
-    );
+    )
   }
 }
 
-export default connect()(Login);
+export default connect()(Login)

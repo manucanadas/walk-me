@@ -6,31 +6,30 @@ import { logIn } from '../actions/auth'
 import { baseApiUrl as baseUrl } from '../config'
 
 class Register extends React.Component {
-
   state = {
-      username: '',
-      password: ''
+    username: '',
+    password: ''
   }
 
   handleChange = (e) => {
-      this.setState({
-          [e.target.name]: e.target.value
-      })
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
   handleClick = (e) => {
     e.preventDefault()
-      const { username, password } = this.state
-      register({ username, password }, { baseUrl })
-          .then((token) => {
-              if (isAuthenticated()) {
-                const user = getDecodedToken()
-                this.props.dispatch(logIn(user))
-                this.props.history.push('/')
-              }
-              return null
-          })
-          .catch(err => alert(err.message))
+    const { username, password } = this.state
+    register({ username, password }, { baseUrl })
+      .then((token) => {
+        if (isAuthenticated()) {
+          const user = getDecodedToken()
+          this.props.dispatch(logIn(user))
+          this.props.history.push('/')
+        }
+        return null
+      })
+      .catch(err => alert(err.message))
   }
 
   render () {
@@ -44,7 +43,6 @@ class Register extends React.Component {
           <label className='btn' htmlFor="name">Password: </label>
           <input onChange={this.handleChange} className='input' value={this.state.password} autoFocus={true} name="password" label='Name' type="password"/>
           <br/>
-      
 
           <button className='text-btn' type="submit"> Submit </button>
         </form>

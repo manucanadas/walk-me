@@ -1,4 +1,4 @@
-import { getDecodedToken } from "authenticare/client/auth"
+import { getDecodedToken } from 'authenticare/client/auth'
 
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 export const LOGOUT = 'LOGOUT'
@@ -19,7 +19,7 @@ export const logOut = (user) => {
 
 export const checkAuth = () => {
   return dispatch => {
-    const user  = getDecodedToken()
+    const user = getDecodedToken()
     if (user) {
       dispatch(logIn(user))
     }
