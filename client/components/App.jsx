@@ -1,39 +1,44 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import Header from './Header.jsx'
 import Home from './Home.jsx'
+import WalkFinder from './WalkFinder.jsx'
 import IndividualWalk from './IndividualWalk.jsx'
-import WalkList from './WalkList.jsx'
 import Login from './Login.jsx'
 import Register from './Register.jsx'
 import User from './User.jsx'
-
-import WalksSaved from './WalksSaved.jsx'
+import SavedWalks from './SavedWalks.jsx'
 import AllWalks from './AllWalks.jsx'
+import { checkAuth } from '../actions/auth.js'
 
-const App = () => {
-  return (
-    <>
-      <Header/>
+import { fetchWalks } from '../actions/index.js'
 
-      <Route exact path='/' component={Home}/>
+class App extends React.Component {
+  componentDidMount () {
+    this.props.dispatch(checkAuth())
+    this.props.dispatch(fetchWalks())
+  }
 
-      <Switch>
-        <Route exact path='/walks/all' component={AllWalks}/>
-        <Route exact path='/walks/saved' component={WalksSaved}/>
-        <Route exact path='/walks/:name' component={IndividualWalk}/>
-        <Route exact path='/walks' component={WalkList}/>
-      </Switch>
+  render () {
+    return (
+      <>
+        <Header/>
+        <Route exact path='/' component={Home}/>
+        <Switch>
+          <Route exact path='/walks/all' component={AllWalks}/>
+          <Route exact path='/walks/saved' component={SavedWalks}/>
+          <Route exact path='/walks/:name' component={IndividualWalk}/>
+          <Route exact path='/walks' component={WalkFinder}/>
+        </Switch>
 
-      <Route path='/login' component={Login}/>
-
-      <Route path='/register' component={Register}/>
-      <Route path='/user' component={User}/>
-
-    </>
-
-  )
+        <Route path='/login' component={Login}/>
+        <Route path='/register' component={Register}/>
+        <Route path='/user' component={User}/>
+      </>
+    )
+  }
 }
 
-export default App
+export default connect()(App)

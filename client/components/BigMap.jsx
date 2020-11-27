@@ -34,7 +34,8 @@ class BigMap extends React.Component {
   render () {
     return (
       <div className="mapContainer">
-        {/* <div className="map" ref={el => this.mapContainer = el} /> */}
+        <div className="map" ref={(el) => { this.mapContainer = el }}
+        />
       </div>
     )
   }
