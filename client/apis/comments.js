@@ -1,5 +1,10 @@
-// import request from 'superagent'
+import request from 'superagent'
 
-export function addCommentToWalkAPI () {
+const baseUrl = '/api/v1'
 
+export function addCommentToWalkAPI (comment) {
+  console.log(comment)
+  return request.post(baseUrl + '/comment').send(comment)
+    .catch(err => console.log(err))
+  // .then(res => console.log(res))
 }

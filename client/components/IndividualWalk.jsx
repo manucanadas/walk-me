@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import AddComment from './AddComment.jsx'
 
 import Comments from './Comments.jsx'
 
@@ -30,6 +31,7 @@ const IndividualWalk = () => {
           </p>
         </div>
       </div>
+      <AddComment/>
       <Comments/>
     </div>
   )
