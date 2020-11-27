@@ -17,7 +17,6 @@ class BigMap extends React.Component {
     // console.log(this.state.walks.coords)
 
     const makeMarkers = () => {
-      console.log(this.props.walks)
       this.props.walks.map(walk => {
         new mapboxgl.Marker()
           .setLngLat(JSON.parse(walk.coords))
