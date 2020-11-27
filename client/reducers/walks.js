@@ -1,4 +1,4 @@
-import { GOT_WALKS }
+import { GOT_WALKS } from '../actions'	
 
 const initialState = []
 
