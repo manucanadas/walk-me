@@ -1,9 +1,20 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-const Nav = () => {
+import { logOff } from 'authenticare/client'
+import { connect } from 'react-redux'
+
+import { IfAuthenticated, IfNotAuthenticated } from './IsAuthenticated'
+
+import { logOut } from '../actions/auth'
+
+const logOutUser = (dispatch) => {
+  logOff()
+  dispatch(logOut())
+}
+
+const Nav = (props) => {
   return (
     <>
-      <h4>Navigation</h4>
       <nav className='nav-box'>
         <ul className="main-nav__items" >
 
@@ -12,11 +23,13 @@ const Nav = () => {
           <li className="main-nav__item"><NavLink to='/walks/all' activeClassName="active" className="nav-link"> All Walks</NavLink></li>
 
           {/* <li className="main-nav__item"><NavLink to='/walks/saved' activeClassName="active" className="nav-link"> Saved Walks</NavLink></li> -- this should only be visible to authenticated users so not always showing on nav bar */}
-
-          <li className="main-nav__item"><NavLink to='/login' activeClassName="active" className="nav-link"> Login</NavLink></li>
-          <li className="main-nav__item"><NavLink to='/register' activeClassName="active" className="nav-link"> Register</NavLink></li>
-
-          {/* <li className="main-nav__item"><NavLink to='/' activeClassName="active" className="nav-link"> Sign out</NavLink></li> - this also is only visible when users are authenticated */}
+          <IfNotAuthenticated>
+            <li className="main-nav__item"><NavLink to='/login' activeClassName="active" className="nav-link"> Login</NavLink></li>
+            <li className="main-nav__item"><NavLink to='/register' activeClassName="active" className="nav-link"> Register</NavLink></li>
+          </IfNotAuthenticated>
+          <IfAuthenticated>
+            <li className="main-nav__item"><NavLink to='/' activeClassName="active" className="nav-link" onClick={() => logOutUser(props.dispatch)}> Sign out</NavLink></li>
+          </IfAuthenticated>
 
         </ul>
       </nav>
@@ -24,6 +37,4 @@ const Nav = () => {
   )
 }
 
-// test change
-
-export default Nav
+export default connect()(Nav)
