@@ -1,18 +1,26 @@
 import React from 'react'
 import { addCommentToWalkAPI } from '../apis/comments'
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 
 class AddComment extends React.Component {
   fakeProps = {
-    userId: 7,
     walkId: 4
   }
 
   state = {
-    userId: this.fakeProps.userId,
+    userId: this.props.auth.user.id,
     text: '',
     walkId: this.fakeProps.walkId,
+    // walkId: get this from url params
     enjoyment: 1
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.auth.user.id !== this.props.auth.user.id) {
+      this.setState({
+        userId: this.props.auth.user.id
+      })
+    }
   }
 
   starChangeHandler = (evt) => {
@@ -51,4 +59,9 @@ class AddComment extends React.Component {
   }
 }
 
-export default AddComment
+function mapStateToProps (state) {
+  const { auth } = state
+  return { auth }
+}
+
+export default connect(mapStateToProps)(AddComment)
