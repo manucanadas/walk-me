@@ -314,3 +314,25 @@ h5 {
   justify-content: center;
   align-items: center;
 }
+
+/* Individual walk component styles */
+.individual-walk-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.individual-walk-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.individual-walk-image-wrapper {
+  justify-content: center;
+}
+
+.individual-walk-image {
+  height: 300px;
+  width: 600px;
+}
