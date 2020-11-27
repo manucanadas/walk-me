@@ -2,6 +2,21 @@
 
 ## Getting Started
 
+If you'd like to add to our stunning Welly Walks repo here's how to get started:
+
+```
+cd workspace
+git clone + https link
+cd myRepo
+git checkout -b feature/aFeature  
+code .  
+npm i
+npm run knex migrate:latest
+npm run knex seed:run
+```
+
+You're good to go! Remember to checkout & pull from the development branch regularly to ensure your feature branch is not too behind updates by others. Also check the Git Protocol at the bottom of this ReadMe for further details 
+
 ## Naming Conventions
 
 #### CLIENT SIDE ACTIONS:
@@ -64,6 +79,51 @@ function addUser(db = connection){
 
 
 ## Wireframes
+
+#### Major Components
+
+| Route | Component | Notes |
+|---|---|---|
+| / | App | Root Component |
+| / | Header | Shows on all pages |
+| /walks | WalkFinder | 
+| /walks/all | AllWalks |
+| /walks/saved | SavedWalks | Authenticated |
+| /walks/:name | IndividualWalk
+| /login | Login | NOT Authenticated |
+| /register | Register | NOT Authenticated |
+| /user | User
+|---|---|---|
+
+
+#### Components & Children
+
+App\
+\
+-- Header\
+-- -- Nav\
+\
+-- Login\
+-- Register\
+-- User\
+\
+-- Home\
+\
+-- WalkFinder\
+-- -- WalkList\
+-- -- BigMap\
+\
+-- IndividualWalk\
+-- -- Comments\
+\
+-- SavedWalks\
+-- -- PolaroidList\
+-- -- -- Polaroid\
+\
+-- AllWalks\
+-- -- PolaroidList\
+-- -- -- Polaroid
+
 
 #### Home
 

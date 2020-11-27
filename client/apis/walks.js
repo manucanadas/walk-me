@@ -3,14 +3,18 @@
 import { request } from "express";
 
 export function getWalksAPI () {
+}
+
+
+export function fetchWalksAPI () {
 
 }
 
-export function getWalkAPI () {
+export function fetchWalkAPI () {
 
 }
 
-export function getSavedWalksByUserAPI () {
+export function fetchSavedWalksByUserAPI () {
 
 }
 

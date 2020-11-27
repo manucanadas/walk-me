@@ -6,5 +6,9 @@ server/public/bundle.js.map
 server/public/styles.css
 server/public/styles.css.map
 .env
+<<<<<<< HEAD
 **/.DS_Store
 
+=======
+.DS_Store
+>>>>>>> faa54f33e2df9f14fdf9a54971cf0cc4d6d5ed02

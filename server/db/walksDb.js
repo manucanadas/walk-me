@@ -1,7 +1,13 @@
 const connection = require('./connection')
 
-function getWalks (db = connection) {
+function getAllWalks (db = connection) {
+  return db('walks').select()
+}
 
+function getWalkComments (id, db = connection) {
+  return db('comments')
+    .where('walk_id', id)
+    .select()
 }
 
 // gets individual walk details & comments
@@ -23,7 +29,8 @@ function getCompletedWalks(id, db=connection){
 
 }
 module.exports = {
-  getWalks,
+  getAllWalks,
+  getWalkComments,
   getWalk,
   getSavedWalksByUser,
   getCompletedWalks
