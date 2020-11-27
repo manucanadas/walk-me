@@ -14,7 +14,7 @@ describe('auth reducer tests', () => {
       loggedIn: false,
       user: null
     }
-    
+
     const actual = auth(undefined, {})
 
     expect(actual).toEqual(expected)
