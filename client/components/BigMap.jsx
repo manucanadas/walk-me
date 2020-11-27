@@ -9,11 +9,22 @@ class BigMap extends React.Component {
   state = {
     lng: 174.7741535,
     lat: -41.2967354,
-    zoom: 12,
+    zoom: 10,
     walks: this.props.walks
   };
 
   componentDidMount () {
+    // console.log(this.state.walks.coords)
+
+    const makeMarkers = () => {
+      console.log(this.props.walks)
+      this.props.walks.map(walk => {
+        new mapboxgl.Marker()
+          .setLngLat(JSON.parse(walk.coords))
+          .addTo(map)
+      })
+    }
+
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v11',
@@ -21,14 +32,18 @@ class BigMap extends React.Component {
       zoom: this.state.zoom
 
     })
+    makeMarkers()
 
-    this.state.walks.map(walk => {
-      new mapboxgl.Marker()
-        .setLngLat(JSON.parse(walk.coords.start))
-        .addTo(map)
-    })
     new mapboxgl.Marker()
-      .setLngLat([12.550343, 55.665957])
+      .setLngLat([174.692406, -41.232617])
+      .addTo(map)
+
+    new mapboxgl.Marker()
+      .setLngLat([174.773512, -41.247232])
+      .addTo(map)
+
+    new mapboxgl.Marker()
+      .setLngLat([174.904689, -41.297824])
       .addTo(map)
   }
 

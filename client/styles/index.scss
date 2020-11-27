@@ -311,7 +311,7 @@ h5 {
 
 .big-map {
   display: flex;
-  justify-content: left;
+  align-content: left;
   margin-left: 45px;
 }
 
@@ -324,7 +324,7 @@ h5 {
   position: relative;
   height: 50rem;
   width: 50rem;
-  
+  justify-content: left;
 }
 
 .sidebarStyle {
