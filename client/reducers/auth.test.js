@@ -11,13 +11,10 @@ describe('auth reducer tests', () => {
 
   test('initial state', () => {
     const expected = {
-      loggedIn: true,
-      user: {
-        id: 1,
-        username: 'walkymcwalkface'
-      }
+      loggedIn: false,
+      user: null
     }
-
+    
     const actual = auth(undefined, {})
 
     expect(actual).toEqual(expected)
