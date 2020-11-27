@@ -314,3 +314,27 @@ h5 {
   justify-content: center;
   align-items: center;
 }
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.mapContainer {
+  position: relative;
+  height: 50rem;
+  width: 50rem;
+}
+
+.sidebarStyle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: bold;
+}

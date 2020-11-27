@@ -1,5 +1,6 @@
 import React from 'react'
 import BigMap from './BigMap'
+// import TestMap from './BigMap'
 
 const WalkList = () => {
   return (
@@ -7,8 +8,11 @@ const WalkList = () => {
     <>
       <h1>THE WALK LIST WORKS</h1>
       <h4>After you search, this shows the list of the walks </h4>
+      {/* <TestMap /> */}
+      <BigMap/>
       <div className='big-map'>
-        <BigMap overflow='visible' style="mapbox://styles/mapbox/streets-v8" center={ [174.773926, -41.2964113] } containerStyle={{ height: '50em', width: '50em' }}/>
+        {/* <BigMap containerStyle={{ height: '50em', width: '50em' }}/>r */}
+
       </div>
     </>
 
