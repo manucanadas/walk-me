@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import AddComment from './AddComment.jsx'
 
 import Comments from './Comments.jsx'
 
@@ -37,7 +38,8 @@ const IndividualWalk = (props) => {
           <Comments/>
         </div>
       </div>
-
+      <AddComment walkId={ props.match.params.name }/>
+      <Comments/>
     </div> : ''
   )
 }
