@@ -1,4 +1,4 @@
-exports.up = function (knex) {
+exports.up = knex => {
   return knex.schema.createTable('comments', table => {
     table.increments('id')
     table.bigInteger('date')
@@ -11,6 +11,6 @@ exports.up = function (knex) {
   })
 }
 
-exports.down = function (knex) {
+exports.down = knex => {
   return knex.schema.dropTable('comments')
 }

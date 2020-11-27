@@ -1,4 +1,4 @@
-exports.up = function (knex) {
+exports.up = knex => {
   return knex.schema.createTable('users_walks', table => {
     table.increments('id')
     table.integer('user_id')
@@ -7,6 +7,6 @@ exports.up = function (knex) {
   })
 }
 
-exports.down = function (knex) {
+exports.down = knex => {
   return knex.schema.dropTable('users_walks')
 }
