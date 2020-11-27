@@ -31,6 +31,12 @@ to delete the sql file, run migrations and run seed sequentially
 npm run db-reset
 ```
 
+once your database has first been populated, you can now use this shortcut
+to delete the sql file, run migrations and run seed sequentially
+```
+npx eslint --ext .js,.jsx . --fix
+```
+
 ## Naming Conventions
 
 #### CLIENT SIDE ACTIONS:
