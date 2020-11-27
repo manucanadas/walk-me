@@ -1,5 +1,5 @@
 // import request from 'superagent'
 
-export function addCommentToWalkAPI () {
+export function postComment () {
 
 }

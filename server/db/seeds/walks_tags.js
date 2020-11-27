@@ -1,4 +1,4 @@
-exports.seed = function (knex) {
+exports.seed = knex => {
   // Deletes ALL existing entries
   return knex('walks_tags').del()
     .then(function () {
