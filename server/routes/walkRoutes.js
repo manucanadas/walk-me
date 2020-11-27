@@ -6,27 +6,32 @@ const db = require('../db/walksDb')
 router.get('/', (req, res) => {
   return db.getAllWalks()
     .then(walks => {
-      // return res.json(walks)
-      return walks.map(walk => {
+      walks = walks.map(walk => {
         return db.getWalkComments(walk.id)
+          .then(comments => {
+            walk.comments = comments
+            return walk
+          })
       })
+      return Promise.all(walks)
     })
+    .then(walks => res.json(walks))
     .catch(err => {
       console.log(err)
       res.status(500).json({ message: 'Somthing went wrong' })
     })
 })
 
-router.get('/test', (req, res) => {
-  return db.getWalkComments(1)
-    .then(comments => {
-      return res.json(comments)
-    })
-    .catch(err => {
-      console.log(err)
-      res.status(500).json({ message: 'Somthing went wrong' })
-    })
-})
+// router.get('/test', (req, res) => {
+//   return db.getWalkComments(1)
+//     .then(comments => {
+//       return res.json(comments)
+//     })
+//     .catch(err => {
+//       console.log(err)
+//       res.status(500).json({ message: 'Somthing went wrong' })
+//     })
+// })
 
 router.get('/:name', (req, res) => {
   // Get for walk component
